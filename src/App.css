@@ -68,7 +68,7 @@ p{
     font-size: 0.9rem;
 }
 
-#createNewTodo{
+.create-new-todo{
     width: 400px;
     height: 50px;
     background-color: #25273C;

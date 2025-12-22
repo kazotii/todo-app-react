@@ -13,6 +13,7 @@ function useTodoLogic(){
     })
     
     function SetNewTodo(){
+        event.preventDefault()
         const newTodo = {text: text, id: Date.now(), completed: false}
         setTodo([...todo, newTodo])
         setText("")
