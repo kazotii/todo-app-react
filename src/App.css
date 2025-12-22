@@ -5,22 +5,30 @@
     text-decoration: none;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
 @font-face {
   font-family: 'Josefin Sans';
-  src: url('./fonts/JosefinSans-Regular.ttf') format('woff2');
+  src: url('./assets/fonts/JosefinSans-Regular.ttf') format('woff2');
   font-weight: 400;
   font-style: regular;
 }
 
 @font-face {
   font-family: 'Josefin Sans';
-  src: url('./fonts/JosefinSans-Bold.ttf') format('woff2');
+  src: url('./assets/fonts/JosefinSans-Bold.ttf') format('woff2');
   font-weight: 700;
   font-style: bold;
 }
 
 body{
-    background-image: url('./images/backgroung-image-todo.jpg');
+    background-image: url('./assets/images/backgroung-image-todo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -255,11 +263,11 @@ span{
     box-sizing: border-box;
 }
 
-#createNewTodo{
+.create-new-todo{
     width: 340px;
 }
 
-#starterTask{
+.starter-task{
     margin-left: 20px;
 }
 
@@ -288,5 +296,4 @@ h1{
 .clear-completed{
     margin-right: 5px;
 }
-
 }

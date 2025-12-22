@@ -11,6 +11,7 @@ function Todo(){
         SetNewTodo,
         setFilter,
         setText,
+        activeFilter,
         text,
         counter
     } = useTodoLogic()
@@ -21,7 +22,7 @@ function Todo(){
                     <h1>TODO</h1>
                 </div>
                 <div className="todo-starter">
-                    <form onSubmit={SetNewTodo}>
+                    <form className="starter-task" onSubmit={SetNewTodo} >
                         <input 
                         className="create-new-todo" 
                         placeholder="Create a new todo" 
@@ -41,9 +42,9 @@ function Todo(){
                         <span className="todo-list-count">{counter} items left</span>
                     </div>
                     <div className="todo-condition-buttons">
-                        <FilterButton text='all' value='all' setFil={setFilter}/>
-                        <FilterButton text='active' value='active' setFil={setFilter}/>
-                        <FilterButton text='completed' value='completed' setFil={setFilter}/>
+                        <FilterButton text='All' value='All' setFil={setFilter} activeFilter={activeFilter}/>
+                        <FilterButton text='Active' value='Active' setFil={setFilter} activeFilter={activeFilter}/>
+                        <FilterButton text='Completed' value='Completed' setFil={setFilter} activeFilter={activeFilter}/>
                     </div>
                     <button className="clear-completed" onClick={ClearCompleted}>Clear completed</button>
                 </div>

@@ -1,6 +1,8 @@
-function FilterButton({text, value, setFil}){
+function FilterButton({text, value, setFil, activeFilter}){
     return(
-        <button onClick={() => setFil(value)}>{text}</button>
+        <button 
+        className={activeFilter === value ? 'active-button' : ''}
+        onClick={() => setFil(value)}>{text}</button>
     )
 }
 

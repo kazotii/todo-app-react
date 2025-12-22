@@ -3,7 +3,7 @@ import { useEffect } from "react"
 
 function useTodoLogic(){
     const [text, setText] = useState("")
-    const [filter, setFilter] = useState("")
+    const [activeFilter, setFilter] = useState("All")
     const [todo, setTodo] = useState(() => {
         const savedTodo = localStorage.getItem('todo')
         if(savedTodo){
@@ -21,14 +21,14 @@ function useTodoLogic(){
 
     const counter = todo.filter((task) => task.completed === false).length
     let filteredTodos = todo
-    switch(filter){
-        case 'all':
+    switch(activeFilter){
+        case 'All':
             filteredTodos = todo
             break;
-        case 'active':
+        case 'Active':
             filteredTodos = todo.filter((task) => task.completed === false) 
             break;
-        case 'completed':
+        case 'Completed':
             filteredTodos = todo.filter((task) => task.completed === true)
             break
     }
@@ -60,7 +60,7 @@ function useTodoLogic(){
         setTodo(todo.filter((task) => task.completed === false))
     }
     return(
-        {filteredTodos, DeleteId, ToggleId, SetNewTodo, setFilter, setText, ClearCompleted, text, counter}
+        {filteredTodos, DeleteId, ToggleId, SetNewTodo, setFilter, setText, ClearCompleted, text, counter, activeFilter}
     )
 }
 

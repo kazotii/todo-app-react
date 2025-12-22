@@ -2,7 +2,7 @@ import TodoItem from "./TodoItem";
 
 function Item({tasks, deleteFunc, toggleFunc}){
   return( 
-    <ul>
+    <ul className="ul-todo-list">
       {tasks.map((item) => (
         <TodoItem
         key={item.id}
