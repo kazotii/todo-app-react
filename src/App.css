@@ -296,4 +296,11 @@ h1{
 .clear-completed{
     margin-right: 5px;
 }
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 }
